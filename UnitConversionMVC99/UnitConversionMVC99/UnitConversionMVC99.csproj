@@ -17,4 +17,8 @@
     <None Include="wwwroot\css\OverallStyle.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Design\" />
+  </ItemGroup>
+
 </Project>
