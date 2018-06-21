@@ -1,7 +1,57 @@
-﻿
+﻿@model double
 @{
     ViewData["Title"] = "DollarsPounds";
 }
 
 <h2>DollarsPounds</h2>
+
+<div id="app">
+
+    <div class="top row georgia">
+        <div class="col-md-12">
+            <p class="one Calibri">Unit</p>
+            <hr>
+            <p class="two Calibri">Converter</p>
+        </div>
+    </div>
+    <div class="top row georgia">
+        <div class="col-md-2 ">
+            <a href="CmtoIn.cshtml" class="btn btn-secondary but peach">Cm to In</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="DollarsPounds.cshtml" class="btn btn-secondary but peach">Dollars to Pounds</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="WattsHorsepower.cshtml" class="btn btn-secondary but peach">Watts to HP</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="MilesKm.cshtml" class="btn btn-secondary but peach">Miles to Km</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="FtoC.cshtml" class="btn btn-secondary but peach">F to C</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="GallonsLiters.cshtml" class="btn btn-secondary but peach">Gallons to Liters</a>
+        </div>
+    </div>
+
+    <div class="row bottom">
+        <div class="col-md-5">
+            <form action="ToPounds" method="post">
+                <p>Dollars <input name="dollars" value="@Model"/></p>
+                <input name="convert" type="submit" />
+
+            </form>
+        </div>
+        <div class="col-md-2 sign peach Georgia">≈</div>
+        <div class="col-md-5">
+            <form action="ToDollars" method="post">
+                <p>Pounds: <input name="pounds" value="@Model"/></p>
+                <input name="convert" type="submit" />
+            </form>
+
+        </div>
+        
+    </div>
+</div>
 

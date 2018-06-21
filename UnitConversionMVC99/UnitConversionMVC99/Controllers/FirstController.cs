@@ -12,5 +12,25 @@ namespace UnitConversionMVC99.Controllers
         {
             return View();
         }
+
+        public ActionResult DollarsPounds()
+        {
+            return View(viewName: "DollarsPounds", model: 0.0);
+        }
+
+        [HttpPost]
+        public ActionResult ToPounds(double dollars)
+        {
+           double pounds = dollars * 1.32;
+            return View(viewName: "DollarsPounds", model: pounds);
+        }
+        [HttpPost]
+        public ActionResult ToDollars(double pounds)
+        {
+            double dollars = pounds * 0.72;
+            return View(viewName: "DollarsPounds", model: dollars);
+        }
+
+
     }
 }
