@@ -1,7 +1,64 @@
-﻿
+﻿@model List<double>
 @{
     ViewData["Title"] = "FtoC";
 }
 
 <h2>FtoC</h2>
+<div>
+    <form action="toCelsius" method="post">
+        <p>Fahrenheit: <input name="F" /></p>
+        <p>Celsius: <input name="C" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        Celsius : @Model[0]
+        Fahrenheit : @Model[1]
+    </p>
+</div>
 
+
+<body>
+    <div id="app">
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.cshtml" class="btn btn-secondary but peach">Cm to In</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.cshtml" class="btn btn-secondary but peach">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.cshtml" class="btn btn-secondary but peach">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.cshtml" class="btn btn-secondary but peach">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.cshtml" class="btn btn-secondary but peach">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="GallonsLiters.cshtml" class="btn btn-secondary but peach">Gallons to Litres</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Fahrenheit:</p>
+                <input v-model="inputF" v-on:input="FtoC" value="Degrees" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Celsius:</p>
+                <input v-model="inputC" v-on:input="CtoF" value="Degrees" class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
+</body>
