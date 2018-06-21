@@ -1,7 +1,24 @@
-﻿
+﻿@model List<double>
 @{
     ViewData["Title"] = "GallonsLiters";
 }
 
-<h2>GallonsLiters</h2>
-
+    <div class="row bottom">
+        <form action="ConvertGL" method="post">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Gallons:</p>
+                <input name="gallons" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Liters:</p>
+                <input name="liters" class="inputs peach Calibri" />
+            </div>
+            <input name="submit" type="submit" />
+        </form>
+        <p>
+            Gallons: @Model[0]
+            <br>
+            Liters: @Model[1]
+        </p>
+    </div>
