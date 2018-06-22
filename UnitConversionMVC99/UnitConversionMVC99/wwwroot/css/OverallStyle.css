@@ -33,11 +33,12 @@
 }
 
 hr {
-	background-color: #4F6367;
-	height: 4px;
-	width: 50%;
-	margin-top: -35px;
-	margin-bottom: -32px;
+    background-color: #4F6367;
+    height: 4px;
+    width: 50%;
+    margin-top: -35px;
+    margin-bottom: -32px;
+    border: none !important;
 }
 
 .bottom {
@@ -67,7 +68,7 @@ hr {
 	height: 15%;
 	text-align: center;
 	border-style: none;
-	border-radius: 2px;
+	border-radius: 4px;
 }
 
 .peach {
