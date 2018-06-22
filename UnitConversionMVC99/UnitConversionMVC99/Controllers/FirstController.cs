@@ -22,12 +22,15 @@ namespace UnitConversionMVC99.Controllers
             {
                 if (inches == 0)
                 {
-                    inches = cm / 2.54;
+                    
+                   double val1 = cm / 2.54;
+                   inches= Math.Round(100 * val1) / 100;
                 }
 
                 if (cm == 0)
                 {
-                    cm = inches * 2.54;
+                    double val1 = inches * 2.54;
+                    cm = Math.Round(100 * val1) / 100;
                 }
                 bob.Add(inches);
                 bob.Add(cm);

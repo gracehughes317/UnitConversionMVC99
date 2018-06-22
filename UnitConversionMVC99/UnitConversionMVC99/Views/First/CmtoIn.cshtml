@@ -1,33 +1,6 @@
 ﻿@model List<double>
 
 <div>
-    <div class="top row georgia">
-        <div class="col-md-12">
-            <p class="one Calibri">Unit</p>
-            <hr>
-            <p class="two Calibri">Converter</p>
-        </div>
-    </div>
-    <div class="top row georgia">
-        <div class="col-md-2 ">
-            <a href="CmtoIn.cshtml" class="btn btn-secondary but peach but peach">Cm to In</a>
-        </div>
-        <div class="col-md-2 ">
-            <a href="DollarsPounds.cshtml" class="btn btn-secondary but peach">Dollars to Pounds</a>
-        </div>
-        <div class="col-md-2 ">
-            <a href="WattsHorsepower.cshtml" class="btn btn-secondary but peach">Watts to HP</a>
-        </div>
-        <div class="col-md-2 ">
-            <a href="MilesKm.cshtml" class="btn btn-secondary but peach">Miles to Km</a>
-        </div>
-        <div class="col-md-2 ">
-            <a href="FtoC.cshtml" class="btn btn-secondary but peach">F to C</a>
-        </div>
-        <div class="col-md-2 ">
-            <a href="GallonsLiters.cshtml" class="btn btn-secondary but peach">Gallons to Litres</a>
-        </div>
-    </div>
     <div class="row bottom">
         <form action="cmtoinches" method="post">
             <div class="col-md-4">
@@ -35,7 +8,7 @@
                 <input name="cm" class="inputs peach Calibri" />
             </div>
             <div class="col-md-4">
-                <input name="submit" type="submit" value="≈" class="sign peach Georgia">
+                <input name="submit" value="≈" type="submit" class="btn calibri peach sign"  />
             </div>
             <div class="col-md-4">
                 <label for="inches" class="units peach Georgia">Inches:</label>
@@ -44,10 +17,12 @@
         </form>
     </div>
     <div class="row bottom">
-        <div class="col-md-6">
-            <span>Centimeters: @Model[1]</span>
+        <div class="col-md-4">
+            <span class="units peach Georgia">@Model[1]</span>
         </div>
-        <div class="col-md-6">
-            <span>Inches: @Model[0]</span>
+        <div class=col-md-4></div>
+        <div class="col-md-4">
+            <span class="units peach Georgia">@Model[0]</span>
         </div>
     </div>
+</div>
