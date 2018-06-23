@@ -82,3 +82,6 @@ hr {
 .calibri {
 	font-family: Calibri;
 }
+.over{
+    overflow: scroll;
+}

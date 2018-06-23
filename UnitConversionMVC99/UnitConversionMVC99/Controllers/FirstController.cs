@@ -24,13 +24,13 @@ namespace UnitConversionMVC99.Controllers
                 {
                     
                    double val1 = cm / 2.54;
-                   inches= Math.Round(100 * val1) / 100;
+                   inches= Math.Round(1000 * val1) / 1000;
                 }
 
                 if (cm == 0)
                 {
                     double val1 = inches * 2.54;
-                    cm = Math.Round(100 * val1) / 100;
+                    cm = Math.Round(1000 * val1) / 1000;
                 }
                 bob.Add(inches);
                 bob.Add(cm);
