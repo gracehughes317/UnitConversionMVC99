@@ -2,42 +2,19 @@
 @{
     ViewData["Title"] = "FtoC";
 }
-<!-- <form action="toCelsius" method="post">
-    <div class="row bottom">
-        <div class="col-md-5">
-            <p class="units peach Georgia">Fahrenheit:</p>
-            <input name="F" class="inputs peach Calibri" />
-        </div>
-        <div class="col-md-2 sign peach Georgia">≈</div>
-        <div class="col-md-5">
-            <p class="units peach Georgia">Celsius:</p>
-            <input name="C" class="inputs peach Calibri" />
-            <p>
-                <input name="submit" type="submit" />
-            </p>
-        </div>
-    </div>
-    </form>
-<p>
-    Celsius: @Model[1]
-    Fahrenheit: @Model[0]
-</p> -->
-
-
-
 <div>
     <div class="row bottom">
         <form action="ToCelsius" method="post">
             <div class="col-md-4">
                 <label for="F" class="units peach Georgia">Fahrenheit:</label>
-                <input name="F" id="Finput" placeholder="F" class="inputs peach Calibri" type="number" min="0" step=".001" oninput="" />
+                <input name="F" id="Finput" placeholder="F" class="inputs peach Calibri" type="number" step=".001" oninput="" />
             </div>
             <div class="col-md-4">
                 <input name="submit" value="≈" type="submit" class="btn calibri peach sign" />
             </div>
             <div class="col-md-4">
                 <label for="C" class="units peach Georgia">Celsius:</label>
-                <input name="C" id="Cinput" placeholder="C" class="inputs peach Calibri" type="number" min="0" step=".001" />
+                <input name="C" id="Cinput" placeholder="C" class="inputs peach Calibri" type="number" step=".001" />
             </div>
         </form>
     </div>

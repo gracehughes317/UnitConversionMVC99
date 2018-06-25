@@ -1,77 +1,86 @@
-﻿.top {
-	background-color: #7A9E9F;
-	padding: 10px;
+﻿﻿.top {
+    background-color: #7A9E9F;
+    padding: 10px;
 }
 
 .but {
-	background-color: #B8D8D8;
-	margin-top: -20px;
-	border: transparent;
-	width: 85%;
-	border-radius: 2px;
-	height: 40px;
-	margin-bottom: 10px;
+    background-color: #B8D8D8;
+    margin-top: -20px;
+    border: transparent;
+    width: 85%;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    height: auto;
+    font-size: 15px;
 }
 
 .row {
-	text-align: center;
+    text-align: center;
 }
 
 .one {
-	margin-left: -300px;
-	color: #EEF5DB;
-	text-shadow: -2px 2px #FE5F55;
-	font-size: 90px;
+    margin-left: -300px;
+    color: #EEF5DB;
+    text-shadow: -2px 2px #FE5F55;
+    font-size: 90px;
 }
 
 .two {
-	margin-right: -198px;
-	color: #EEF5DB;
-	text-shadow: -2px 2px #FE5F55;
-	font-size: 90px;
+    margin-right: -198px;
+    color: #EEF5DB;
+    text-shadow: -2px 2px #FE5F55;
+    font-size: 90px;
 }
 
-hr {
-	background-color: #4F6367;
-	height: 4px;
-	width: 50%;
-	margin-top: -45px;
-	margin-bottom: -35px;
+.hr {
+    background-color: #4F6367;
+    height: 4px;
+    width: 50%;
+    margin-top: -35px;
+    margin-bottom: -32px;
+    border: none !important;
 }
 
 .bottom {
-	background-color: #EEF5DB;
-	text-align: center;
-	height: 100%;
+    background-color: #EEF5DB;
+    text-align: center;
+    height: 100%;
+}
+.sign {
+    margin-top: 80px;
+    font-size: 40px;
+    background-color: #4F6367;
+    font-weight: bold;
+    text-align: center;
 }
 
-.sign {
-	margin-top: -65px;
-	font-size: 250px;
-}
 
 .units {
-	font-size: 50px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .inputs {
-	background-color: #4F6367;
-	font-size: 60px;
-	width: 60%;
-	height: 15%;
-	text-align: center;
-	border-style: none;
-	border-radius: 2px;
+    background-color: #4F6367;
+    font-size: 60px;
+    width: 60%;
+    height: 15%;
+    text-align: center;
+    border-style: none;
+    border-radius: 4px;
 }
 
 .peach {
-	color: #FE5F55;
+    color: #FE5F55;
 }
-
 .georgia {
-	font-family: Georgia;
+    font-family: Georgia;
 }
 
 .calibri {
-	font-family: Calibri;
+    font-family: Calibri;
+}
+
+.over {
+    overflow: scroll;
 }

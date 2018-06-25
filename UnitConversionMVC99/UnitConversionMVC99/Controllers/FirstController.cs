@@ -28,10 +28,10 @@ namespace UnitConversionMVC99.Controllers
         List<double> fc = new List<double>();
         if (F != 0)
             {
+                fc.Add((F - 32) * 0.5556);
                 fc.Add(F);
-                fc.Add((F-32)*0.5556);
             }
-        if(C != 0)
+        if (C != 0)
             {
                 fc.Add(C);
                 fc.Add((C * 1.8) + 32);

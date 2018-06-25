@@ -14,41 +14,45 @@
 <body>
     <div class="top row georgia">
         <div class="col-md-12">
-            <p class="one Calibri">Unit</p>
+            <p class="one calibri">Unit</p>
             <hr>
-            <p class="two Calibri">Converter</p>
+            <p class="two calibri">Converter</p>
         </div>
     </div>
     <div class="top row georgia">
         <div class="col-md-2 ">
-            <a href="CmtoIn.cshtml" class="btn btn-secondary but peach">Cm to In</a>
+            <a href="~/First/CmtoIn" class="btn btn-secondary but peach">Cm to In</a>
         </div>
         <div class="col-md-2 ">
-            <a href="DollarsPounds.cshtml" class="btn btn-secondary but peach">Dollars to Pounds</a>
+            <a href="~/First/DollarsPounds" class="btn btn-secondary but peach">Dollars to Pounds</a>
         </div>
         <div class="col-md-2 ">
-            <a href="WattsHorsepower.cshtml" class="btn btn-secondary but peach">Watts to HP</a>
+            <a href="~/First/WattsHorsepower" class="btn btn-secondary but peach">Watts to HP</a>
         </div>
         <div class="col-md-2 ">
-            <a href="MilesKm.cshtml" class="btn btn-secondary but peach">Miles to Km</a>
+            <a href="~/First/MilesKm" class="btn btn-secondary but peach">Miles to Km</a>
         </div>
         <div class="col-md-2 ">
-            <a href="FtoC.cshtml" class="btn btn-secondary but peach">F to C</a>
+            <a href="~/First/FtoC" class="btn btn-secondary but peach">F to C</a>
         </div>
         <div class="col-md-2 ">
-            <a href="GallonsLiters.cshtml" class="btn btn-secondary but peach">Gallons to Liters</a>
+            <a href="~/First/GallonsLiters" class="btn btn-secondary but peach">Gallons to Liters</a>
         </div>
     </div>
-    @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; 2018 - UnitConversionMVC99</p>
-    </footer>
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    @RenderSection("Scripts", required: false)
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="row top georgia">
+        <div class="col-md-12">
+            <environment include="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+            </environment>
+            @RenderSection("Scripts", required: false)
+        </div>
+    </div>
 </body>
 </html>
