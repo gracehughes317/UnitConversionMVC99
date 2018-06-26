@@ -5,12 +5,12 @@
             <form action="milesKm" method="post">
                 <div class="col-md-5">
                     <label for="input1" class="units peach Georgia">Miles:</label>
-                    <input name="input1" value="@Model[0]"class="inputs peach Calibri" id="input11"/>
+                    <input name="input1" value="@Model[0]"class="inputs peach Calibri" id="input11"type="number" step=".001"/>
                 </div>
                 <input name="submit" type="submit" value="≈"class="col-md-2 sign peach Georgia">
                 <div class="col-md-5">
                     <label for="input2" class="units peach Georgia">Kilometers:</label>
-                    <input name="input2" value="@Model[1]"class="inputs peach Calibri" id="input22"/>
+                    <input name="input2" value="@Model[1]"class="inputs peach Calibri" id="input22" type="number" step=".001"/>
                 </div>
             </form>
         </div>
