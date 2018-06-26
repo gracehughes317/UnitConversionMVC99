@@ -4,17 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - UnitConversionMVC99</title>
-
+    
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/OverallStyle.css" />
     </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+
 </head>
 <body>
     <div class="top row georgia">
@@ -58,3 +53,57 @@
 </body>
 </html>
 <script src="https://unpkg.com/vue"></script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UnitConversionMVC99</title>
+    
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/OverallStyle.css" />
+    </environment>
+
+<body>
+    <div class="top row georgia">
+        <div class="col-md-12">
+            <p class="one calibri">Unit</p>
+            <hr>
+            <p class="two calibri">Converter</p>
+        </div>
+    </div>
+    <div class="top row georgia">
+        <div class="col-md-2 ">
+            <a href="~/First/CmtoIn" class="btn btn-secondary but peach">Cm to In</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="~/First/DollarsPounds" class="btn btn-secondary but peach">Dollars to Pounds</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="~/First/WattsHorsepower" class="btn btn-secondary but peach">Watts to HP</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="~/First/MilesKm" class="btn btn-secondary but peach">Miles to Km</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="~/First/FtoC" class="btn btn-secondary but peach">F to C</a>
+        </div>
+        <div class="col-md-2 ">
+            <a href="~/First/GallonsLiters" class="btn btn-secondary but peach">Gallons to Liters</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="row top georgia">
+        <div class="col-md-12">
+            <environment include="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+            </environment>
+            @RenderSection("Scripts", required: false)
+        </div>
+    </div>

@@ -9,8 +9,9 @@
 	border: transparent;
 	width: 85%;
 	border-radius: 2px;
-	height: 40px;
 	margin-bottom: 10px;
+    height: auto;
+    font-size: 15px;
 }
 
 .row {
@@ -32,11 +33,12 @@
 }
 
 hr {
-	background-color: #4F6367;
-	height: 4px;
-	width: 50%;
-	margin-top: -45px;
-	margin-bottom: -35px;
+    background-color: #4F6367;
+    height: 4px;
+    width: 50%;
+    margin-top: -35px;
+    margin-bottom: -32px;
+    border: none !important;
 }
 
 .bottom {
@@ -46,12 +48,17 @@ hr {
 }
 
 .sign {
-	margin-top: -65px;
-	font-size: 250px;
+    margin-top: 80px;
+    font-size: 40px;
+    background-color: #4F6367;
+    font-weight: bold;
+    text-align: center;
 }
+
 
 .units {
 	font-size: 50px;
+    font-weight: bold;
 }
 
 .inputs {
@@ -61,7 +68,7 @@ hr {
 	height: 15%;
 	text-align: center;
 	border-style: none;
-	border-radius: 2px;
+	border-radius: 4px;
 }
 
 .peach {
@@ -74,4 +81,7 @@ hr {
 
 .calibri {
 	font-family: Calibri;
+}
+.over{
+    overflow: scroll;
 }
