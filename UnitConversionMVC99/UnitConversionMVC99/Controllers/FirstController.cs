@@ -16,10 +16,25 @@ namespace UnitConversionMVC99.Controllers
 
         public IActionResult GallonsLiters()
         {
-            List<double> list = new List<double>();
-            list.Add(0d);
-            list.Add(0d);
-            return View(viewName: "GallonsLiters", model: list);
+            List<double> bob = new List<double>();
+            if (inches == 0 || cm == 0)
+            {
+                if (inches == 0)
+                {
+                    
+                   double val1 = cm / 2.54;
+                   inches= Math.Round(1000 * val1) / 1000;
+                }
+
+                if (cm == 0)
+                {
+                    double val1 = inches * 2.54;
+                    cm = Math.Round(1000 * val1) / 1000;
+                }
+                bob.Add(inches);
+                bob.Add(cm);
+            }
+            return View(viewName: "CmtoIn", model: bob);
         }
         public IActionResult MilesKm()
         {
@@ -88,3 +103,27 @@ namespace UnitConversionMVC99.Controllers
     }
 }
 
+
+            List<double> list = new List<double>();
+            list.Add(0d);
+            list.Add(0d);
+            return View(viewName: "GallonsLiters", model: list);
+            List<double> bob = new List<double>();
+            if (Math.Abs(inches) < 0.001 || Math.Abs(cm) < 0.001)
+            {
+                if (Math.Abs(inches) < 0.001)
+                {
+                    
+                   double val1 = cm / 2.54;
+                   inches= Math.Round(1000 * val1) / 1000;
+                }
+
+                if (Math.Abs(cm) < 0.001)
+                {
+                    double val1 = inches * 2.54;
+                    cm = Math.Round(1000 * val1) / 1000;
+                }
+                bob.Add(inches);
+                bob.Add(cm);
+            }
+            return View(viewName: "CmtoIn", model: bob);
