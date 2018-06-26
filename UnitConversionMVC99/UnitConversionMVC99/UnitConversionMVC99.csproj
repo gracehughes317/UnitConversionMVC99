@@ -24,7 +24,4 @@
   <ItemGroup>
     <Content Remove="wwwroot\css\OverallStyle.css" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Controllers\FirstController.cs" />
-  </ItemGroup>
 </Project>
