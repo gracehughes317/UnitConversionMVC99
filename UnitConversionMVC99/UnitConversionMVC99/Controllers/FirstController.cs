@@ -18,16 +18,16 @@ namespace UnitConversionMVC99.Controllers
         public ActionResult cmtoinches(double inches, double cm)
         {
             List<double> bob = new List<double>();
-            if (inches == 0 || cm == 0)
+            if (Math.Abs(inches) < 0.001 || Math.Abs(cm) < 0.001)
             {
-                if (inches == 0)
+                if (Math.Abs(inches) < 0.001)
                 {
                     
                    double val1 = cm / 2.54;
                    inches= Math.Round(1000 * val1) / 1000;
                 }
 
-                if (cm == 0)
+                if (Math.Abs(cm) < 0.001)
                 {
                     double val1 = inches * 2.54;
                     cm = Math.Round(1000 * val1) / 1000;
