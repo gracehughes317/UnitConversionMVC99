@@ -1,72 +1,38 @@
 ﻿@model List<double>
     <div>
 
-        <div class="top row georgia">
-            <div class="col-md-12">
-                <p class="one Calibri">Unit</p>
-                <hr>
-                <p class="two Calibri">Converter</p>
-            </div>
-        </div>
-        <div class="top row georgia">
-            <div class="col-md-2 ">
-                <a href="CmtoIn.cshtml" class="btn btn-secondary but peach but peach">Cm to In</a>
-            </div>
-            <div class="col-md-2 ">
-                <a href="DollarsPounds.cshtml" class="btn btn-secondary but peach">Dollars to Pounds</a>
-            </div>
-            <div class="col-md-2 ">
-                <a href="WattsHorsepower.cshtml" class="btn btn-secondary but peach">Watts to HP</a>
-            </div>
-            <div class="col-md-2 ">
-                <a href="MilesKm.cshtml" class="btn btn-secondary but peach">Miles to Km</a>
-            </div>
-            <div class="col-md-2 ">
-                <a href="FtoC.cshtml" class="btn btn-secondary but peach">F to C</a>
-            </div>
-            <div class="col-md-2 ">
-                <a href="GallonsLiters.cshtml" class="btn btn-secondary but peach">Gallons to Litres</a>
-            </div>
-        </div>
-
-        <div class="row bottom">
+        <div class="row bottom" id="app">
             <form action="milesKm" method="post">
                 <div class="col-md-5">
                     <label for="input1" class="units peach Georgia">Miles:</label>
-                    <input name="input1" value="@Model[0]"class="inputs peach Calibri" v-model="input11" v-on:onchange="change1"/>
+                    <input name="input1" value="@Model[0]"class="inputs peach Calibri" id="input11"/>
                 </div>
                 <input name="submit" type="submit" value="≈"class="col-md-2 sign peach Georgia">
                 <div class="col-md-5">
                     <label for="input2" class="units peach Georgia">Kilometers:</label>
-                    <input name="input2" value="@Model[1]"class="inputs peach Calibri" v-model="input22" v-on:onchange="change2"/>
+                    <input name="input2" value="@Model[1]"class="inputs peach Calibri" id="input22"/>
                 </div>
             </form>
         </div>
     </div>
-    <script src="https://unpkg.com/vue"></script>
 <script>
-    var app = new Vue({
-        data: {
-            input22: @Model[1],
-            input11: @Model[0],
-        },
-        methods: {
-            change2: function () {
-                this.input11 = 0;
-                if (isNAN(this.input22)) {
-                    this.input22 = 0;
-                    this.input11 = 0;
-                }
-            },
-            change1: function () {
-                this.input22 = 0;
-                if (isNAN(this.input11)) {
-                    this.input22 = 0;
-                    this.input11 = 0;
+
+    miles = document.getElementById("input11");
+        km = document.getElementById("input22");
+
+
+    km.onkeyup = function () {
+        miles.value = 0;
+        if (isNAN(km.value)) {
+            km.value = 0;
+            miles.value = 0;
+        }
+    };
+            km.value.onkeyup = function() {
+                km.value = 0;
+                if (isNAN(miles.value)) {
+                    km.value = 0;
+                    miles.value = 0;
                 }
             }
-
-        }
-
-    })
 </script>
