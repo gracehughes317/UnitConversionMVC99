@@ -13,11 +13,26 @@ namespace UnitConversionMVC99.Controllers
             return View();
         }
 
+        public ActionResult WattsHorsepower()
+        {
+            return View(viewName: "WattsHorsepower", model: 0.0);
+        }
         public ActionResult DollarsPounds()
         {
             return View(viewName: "DollarsPounds", model: 0.0);
         }
-
+        [HttpPost]
+        public ActionResult ToWatts(double horsepower)
+        {
+            double watts = horsepower * 745.7;
+            return View(viewName: "WattsHorsepower", model: watts);
+        }
+        [HttpPost]
+        public ActionResult ToHorsepower(double watts)
+        {
+            double horsepower = watts / 745.7;
+            return View(viewName: "WattsHorsepower", model: horsepower);
+        }
         [HttpPost]
         public ActionResult ToPounds(double dollars)
         {

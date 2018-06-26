@@ -1,7 +1,24 @@
-﻿
+﻿@model double
 @{
     ViewData["Title"] = "WattsHorsepower";
 }
 
-<h2>WattsHorsepower</h2>
+<div id="app">
 
+    <div class="row bottom">
+        <div class="col-md-5">
+            <form action="ToWatts" method="post">
+                <p>Horsepower: <input name="horsepower" value="@Model" /></p>
+                <input name="convert" type="submit" />
+            </form>
+        </div>
+        <div class="col-md-2 sign peach Georgia">≈</div>
+        <div class="col-md-5">
+            <form action="ToHorsepower" method="post">
+                <p>Watts: <input name="watts" value="@Model" /></p>
+                <input name="convert" type="submit" />
+            </form>
+        </div>
+
+    </div>
+</div>
