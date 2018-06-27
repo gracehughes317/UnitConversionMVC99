@@ -7,18 +7,18 @@
         <form action="ToCelsius" method="post">
             <div class="col-md-4">
                 <label for="F" class="units peach Georgia">Fahrenheit:</label>
-                <input name="F" id="Finput" placeholder="F" class="inputs peach Calibri" type="number" step=".001" oninput="" />
+                <input name="F" id="Finput" value="@Model[0]" placeholder="F" class="inputs peach Calibri" type="number" step=".001" oninput="" />
             </div>
             <div class="col-md-4">
                 <input name="submit" value="≈" type="submit" class="btn calibri peach sign" />
             </div>
             <div class="col-md-4">
                 <label for="C" class="units peach Georgia">Celsius:</label>
-                <input name="C" id="Cinput" placeholder="C" class="inputs peach Calibri" type="number" step=".001" />
+                <input name="C" id="Cinput" value="@Model[1]" placeholder="C" class="inputs peach Calibri" type="number" step=".001" />
             </div>
         </form>
     </div>
-    <div class="row bottom over">
+    <!--<div class="row bottom over">
         <div class="col-md-4">
             <span class="units peach Georgia">@Model[0]</span>
         </div>
@@ -26,7 +26,7 @@
         <div class="col-md-4">
             <span class="units peach Georgia">@Model[1]</span>
         </div>
-    </div>
+    </div>-->
 </div>
 <script>
     FInput = document.getElementById("Finput");
